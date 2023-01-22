@@ -1,4 +1,6 @@
 const checkoutBtn = document.getElementById('checkout-btn');
+const oneDollarQty = document.getElementById('one-dollar-qty');
+const twoDollarQty = document.getElementById('two-dollar-qty');
 
 checkoutBtn.addEventListener('click', checkOut);
 
@@ -11,8 +13,8 @@ async function checkOut() {
       },
       body: JSON.stringify({
         items: [
-          { id: 1, quantity: 3 },
-          { id: 2, quantity: 1 }
+          { id: 1, quantity: oneDollarQty.value },
+          { id: 2, quantity: twoDollarQty.value }
         ]
       })
     });
