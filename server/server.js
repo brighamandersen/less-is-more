@@ -13,7 +13,7 @@ const storeItems = new Map([
   [2, { priceInCents: 200, name: 'Donate $2' }]
 ]);
 
-app.post('/create-checkout-session', async (req, res) => {
+app.post('/process-payment', async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],

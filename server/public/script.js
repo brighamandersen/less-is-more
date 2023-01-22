@@ -4,7 +4,7 @@ checkoutBtn.addEventListener('click', checkOut);
 
 async function checkOut() {
   try {
-    const res = await fetch('/create-checkout-session', {
+    const res = await fetch('/process-payment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
