@@ -5,6 +5,11 @@ const twoDollarQty = document.getElementById('two-dollar-qty');
 checkoutBtn.addEventListener('click', checkOut);
 
 async function checkOut() {
+  const oneDollarQtyVal = oneDollarQty.value;
+  const twoDollarQtyVal = twoDollarQty.value;
+
+  if (!oneDollarQtyVal || !twoDollarQtyVal) return;
+
   try {
     const res = await fetch('/process-payment', {
       method: 'POST',
@@ -13,8 +18,8 @@ async function checkOut() {
       },
       body: JSON.stringify({
         items: [
-          { id: 1, quantity: oneDollarQty.value },
-          { id: 2, quantity: twoDollarQty.value }
+          { id: 1, quantity: oneDollarQtyVal },
+          { id: 2, quantity: twoDollarQtyVal },
         ]
       })
     });
