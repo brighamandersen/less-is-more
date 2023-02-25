@@ -1,6 +1,9 @@
 {
+  "name": "less-is-more",
+  "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
