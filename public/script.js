@@ -2,13 +2,29 @@ const checkoutBtn = document.getElementById('checkout-btn');
 const oneDollarQty = document.getElementById('one-dollar-qty');
 const twoDollarQty = document.getElementById('two-dollar-qty');
 
+oneDollarQty.addEventListener('input', toggleCheckoutButton);
+twoDollarQty.addEventListener('input', toggleCheckoutButton);
 checkoutBtn.addEventListener('click', checkOut);
 
-async function checkOut() {
-  const oneDollarQtyVal = oneDollarQty.value;
-  const twoDollarQtyVal = twoDollarQty.value;
+// Enable or disable checkout button
+function toggleCheckoutButton() {
+  // Disable checkout button if neither are filled in 
+  if (!oneDollarQty.value && !twoDollarQty.value) {
+    checkoutBtn.disabled = true;
+  } else {
+    checkoutBtn.disabled = false; // Enable checkout button
+  }
+}
 
-  if (!oneDollarQtyVal || !twoDollarQtyVal) return;
+async function checkOut() {
+  let items = [];
+
+  if (!!oneDollarQty.value) {
+    items.push({ id: 1, quantity: oneDollarQty.value })
+  }
+  if (!!twoDollarQty.value) {
+    items.push({ id: 2, quantity: twoDollarQty.value })
+  }
 
   try {
     const res = await fetch('/process-payment', {
@@ -17,10 +33,7 @@ async function checkOut() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        items: [
-          { id: 1, quantity: oneDollarQtyVal },
-          { id: 2, quantity: twoDollarQtyVal },
-        ]
+        items
       })
     });
 
