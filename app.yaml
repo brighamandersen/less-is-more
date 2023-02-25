@@ -5,3 +5,5 @@ instance_class: F1
 env_variables:
   SERVER_URL: https://less-is-more-brig.wm.r.appspot.com
   STRIPE_KEY: sk_test_51MSuOlFx8KL63DnW42yL8ptS25xbENh3k7n7XXAdWJCNtErCg6wotd0UN550ufEL3wNaft1NfYvxZW0QYUDa7Owt00uGVxMTJp
+
+project: less-is-more-brig
