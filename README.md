@@ -11,4 +11,4 @@ npm i
 touch .env
 ```
 
-<b>Note:</b> After creating the `.env` file, fill it with proper contents (See [`.env.example`](./.env.example)).
+Make sure to fill `.env` with correct contents (see [`.env.example`](/.env.example)).
