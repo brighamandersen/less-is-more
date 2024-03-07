@@ -10,4 +10,5 @@ Followed [this tutorial](https://youtu.be/1r-F3FIONl8) by WDS to get stripe work
 npm i
 touch .env # Then 
 ```
-**Note:** After creating the `.env` file, fill it with proper contents (See [`.env.example`](./.env.example)).
+
+<b>Note:</b> After creating the `.env` file, fill it with proper contents (See [`.env.example`](./.env.example)).
