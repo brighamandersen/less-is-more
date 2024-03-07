@@ -12,3 +12,9 @@ touch .env
 ```
 
 > Make sure to fill `.env` with correct contents (see [`.env.example`](/.env.example)).
+
+## How to spin up server in production
+
+```
+npm run forever
+```
