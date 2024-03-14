@@ -2,9 +2,9 @@
   "name": "less-is-more",
   "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
+    "dev": "nodemon server.js",
     "start": "node server.js",
-    "forever": "forever start server.js"
+    "deploy": "pm2 start pm2.json"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

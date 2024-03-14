@@ -16,5 +16,5 @@ touch .env
 ## How to spin up server in production
 
 ```
-npm run forever
+npm run deploy
 ```
