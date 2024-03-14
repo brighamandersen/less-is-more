@@ -1,7 +1,6 @@
 {
   "apps": {
     "name": "less-is-more",
-    "script": "server.js",
-    "output": "pm2.log"
+    "script": "server.js"
   }
 }
